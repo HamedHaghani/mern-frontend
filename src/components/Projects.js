@@ -5,7 +5,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5001/api/projects")
+    axios.get("https://mern-backend-248k.onrender.com/api/contact")
       .then(response => {
         setProjects(response.data);
       })

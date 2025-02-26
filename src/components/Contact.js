@@ -20,7 +20,7 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      const response = await axios.post("http://localhost:5001/api/contact", formData);
+      const response = await axios.post("https://mern-backend-248k.onrender.com/api/projects", formData);
       setStatus(response.data.message);
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
