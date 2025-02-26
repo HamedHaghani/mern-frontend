@@ -1,9 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer"
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+
+
+
 
 const Home = () => (
   <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white p-6">
@@ -31,41 +34,49 @@ const About = () => (
 );
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <Router>
       <div className="min-h-screen bg-gray-900 text-white">
         {/* Navigation Bar */}
         <nav className="bg-gray-800 py-4 shadow-md">
-      <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
-       <h1 className="text-xl font-bold text-white">My Portfolio</h1>
-       <ul className="flex space-x-6">
-       <li>
+  <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
+    <h1 className="text-xl font-bold text-white">My Portfolio</h1>
+    
+    {/* Mobile Menu Button */}
+    <button className="text-white md:hidden" onClick={() => setIsOpen(!isOpen)}>
+      ☰
+    </button>
+
+    {/* Navigation Links */}
+    <ul className={`md:flex space-x-6 ${isOpen ? "block" : "hidden"} md:block`}>
+      <li>
         <NavLink to="/" className={({ isActive }) => 
           `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
           Home
         </NavLink>
-       </li>
-       <li>
+      </li>
+      <li>
         <NavLink to="/projects" className={({ isActive }) => 
           `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
           Projects
         </NavLink>
-       </li>
-       <li>
+      </li>
+      <li>
         <NavLink to="/about" className={({ isActive }) => 
           `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
           About
         </NavLink>
-        </li>
-       <li>
+      </li>
+      <li>
         <NavLink to="/contact" className={({ isActive }) => 
           `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
           Contact
-          </NavLink>
-       </li>
-      </ul>
-    </div>
-    </nav>
+        </NavLink>
+      </li>
+    </ul>
+  </div>
+</nav>
 
         {/* Page Routes */}
         <Routes>
