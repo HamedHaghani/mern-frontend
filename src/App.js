@@ -4,9 +4,20 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact"
 
 const Home = () => (
-  <div className="text-center py-20">
-    <h1 className="text-4xl font-bold text-green-400">Welcome to My Portfolio</h1>
-    <p className="mt-4 text-gray-300">Showcasing my projects and skills.</p>
+  <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white p-6">
+    <h1 className="text-5xl font-bold text-green-400 mb-4">Hi, I'm Hamed! 👋</h1>
+    <p className="text-lg text-gray-300 max-w-xl text-center">
+      I am a Full Stack Developer passionate about building web applications.
+      Check out my projects and feel free to contact me!
+    </p>
+    <div className="mt-6">
+      <a href="/projects" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg mr-4">
+        View Projects
+      </a>
+      <a href="/contact" className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg">
+        Contact Me
+      </a>
+    </div>
   </div>
 );
 
