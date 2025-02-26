@@ -5,7 +5,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get("https://mern-backend-248k.onrender.com/api/contact")
+    axios.get("https://mern-backend-248k.onrender.com/api/projects")
       .then(response => {
         setProjects(response.data);
       })
