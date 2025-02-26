@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Projects from "./components/Projects";
-import Contact from "./components/Contact"
+import Contact from "./components/Contact";
+import Footer from "./components/Footer"
+import { NavLink } from "react-router-dom";
 
 const Home = () => (
   <div className="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white p-6">
@@ -33,14 +35,37 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-900 text-white">
         {/* Navigation Bar */}
-        <nav className="bg-gray-800 py-4">
-          <ul className="flex justify-center space-x-6">
-            <li><Link to="/" className="text-gray-300 hover:text-white">Home</Link></li>
-            <li><Link to="/projects" className="text-gray-300 hover:text-white">Projects</Link></li>
-            <li><Link to="/about" className="text-gray-300 hover:text-white">About</Link></li>
-            <li><Link to="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
-          </ul>
-        </nav>
+        <nav className="bg-gray-800 py-4 shadow-md">
+      <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
+       <h1 className="text-xl font-bold text-white">My Portfolio</h1>
+       <ul className="flex space-x-6">
+       <li>
+        <NavLink to="/" className={({ isActive }) => 
+          `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
+          Home
+        </NavLink>
+       </li>
+       <li>
+        <NavLink to="/projects" className={({ isActive }) => 
+          `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
+          Projects
+        </NavLink>
+       </li>
+       <li>
+        <NavLink to="/about" className={({ isActive }) => 
+          `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
+          About
+        </NavLink>
+        </li>
+       <li>
+        <NavLink to="/contact" className={({ isActive }) => 
+          `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
+          Contact
+          </NavLink>
+       </li>
+      </ul>
+    </div>
+    </nav>
 
         {/* Page Routes */}
         <Routes>
@@ -50,6 +75,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
+      <Footer />
     </Router>
   );
 }
