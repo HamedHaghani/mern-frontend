@@ -52,7 +52,7 @@ const Projects = () => {
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-green-400 hover:underline"
+                    className="text-orange-400 hover:underline"
                   >
                     Live Demo
                   </a>
