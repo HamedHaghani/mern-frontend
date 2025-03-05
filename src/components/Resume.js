@@ -6,7 +6,7 @@ const Resume = () => {
       <h1 className="text-4xl font-bold text-green-400 mb-6">My Resume</h1>
       <iframe
         src="/resume.pdf"
-        className="w-full max-w-3xl h-[600px] rounded-lg shadow-md"
+        className="w-full max-w-3xl h-[600px] rounded-lg shadow-md" title="Resume of Hamed Haghani"
       ></iframe>
       <a
         href="/resume.pdf"
