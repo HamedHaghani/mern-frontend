@@ -13,24 +13,24 @@ const Home = () => (
       <img 
         src="/profile.jpg" 
         alt="Hamed Haghani" 
-        className="w-40 h-40 md:w-56 md:h-56 rounded-full shadow-lg border-4 border-green-400"
+        className="w-40 h-40 md:w-56 md:h-56 rounded-full shadow-lg border-4 border-white-400"
       />
     </div>
 
     {/* Intro Text */}
     <div className="text-center md:text-left">
-      <h1 className="text-4xl md:text-5xl font-bold text-green-400 mb-4">
-        Hi, I'm Hamed! 👋
-      </h1>
+    <h1 className="text-[4rem] md:text-[6rem] font-extrabold tracking-wider uppercase text-gray-100">
+  We Build <span className="text-orange-400">Your Software</span>
+</h1>
       <p className="text-lg text-gray-300 max-w-xl">
         I'm a Full Stack Developer passionate about building scalable web applications.
         Check out my projects and feel free to contact me!
       </p>
       <div className="mt-6 space-x-4">
-        <a href="/projects" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg">
+        <a href="/projects" className="bg-gray-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg">
           View Projects
         </a>
-        <a href="/contact" className="bg-green-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg">
+        <a href="/contact" className="bg-orange-500 hover:bg-green-600 text-white py-2 px-6 rounded-lg">
           Contact Me
         </a>
       </div>
@@ -73,7 +73,7 @@ function App() {
                 <NavLink to="/projects" className={({ isActive }) =>
                   `text-gray-300 hover:text-white ${isActive ? "border-b-2 border-green-400" : ""}`}>
                   Projects
-                </NavLink>
+                </NavLink>a
               </li>
               <li>
                 <NavLink to="/about" className={({ isActive }) =>
