@@ -23,11 +23,13 @@ const Projects = () => {
             <div key={project._id} className="bg-gray-800 p-6 rounded-lg shadow-md">
               {/* Image Section */}
               {project.image && (
-                <img
-                  src={`https://mern-backend-248k.onrender.com${project.image}`} 
-                  alt={project.title}
-                  className="w-full h-40 object-cover rounded-md mb-4"
-                />
+               <img
+               src={project.image.startsWith("/") ? project.image : `${process.env.PUBLIC_URL}${project.image}`}
+               alt={project.title}
+               className="w-full h-40 object-cover rounded-md mb-4"
+             />
+             
+              
               )}
               <h3 className="text-xl font-semibold">{project.title}</h3>
               <p className="mt-2 text-gray-400">{project.description}</p>
