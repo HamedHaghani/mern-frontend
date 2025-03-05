@@ -17,8 +17,8 @@ const Home = () => (
 
 const About = () => (
   <div className="relative min-h-screen flex flex-col items-center text-white px-6 py-10">
-    {/* Profile Image - Centered */}
-    <div className="w-56 h-56">
+    {/* Profile Image - Now Scales Well on Mobile */}
+    <div className="w-40 h-40 md:w-56 md:h-56">
       <img 
         src="/profile.jpg" 
         alt="Hamed Haghani" 
@@ -26,26 +26,27 @@ const About = () => (
       />
     </div>
 
-    {/* Intro Text - Moved Below Image */}
-    <div className="text-center mt-6 max-w-2xl">
-      <h1 className="text-4xl md:text-5xl font-extrabold tracking-wider uppercase text-gray-100">
-        I Build <span className="text-orange-400">Your Software</span>
+    {/* Intro Text - Adjusted for Mobile */}
+    <div className="text-center mt-4 max-w-md md:max-w-2xl">
+      <h1 className="text-3xl md:text-5xl font-extrabold tracking-wider uppercase text-gray-100">
+        We Build <span className="text-orange-400">Your Software</span>
       </h1>
-      <p className="text-lg text-gray-300 mt-4">
+      <p className="text-base md:text-lg text-gray-300 mt-2 md:mt-4">
         I'm a Full Stack Developer passionate about building scalable web applications.
         Check out my projects and feel free to contact me!
       </p>
-      <div className="mt-6 space-x-4">
-        <a href="/projects" className="bg-gray-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg">
+      <div className="mt-4 space-x-2 md:space-x-4">
+        <a href="/projects" className="bg-gray-500 hover:bg-blue-600 text-white py-2 px-4 md:py-2 md:px-6 rounded-lg">
           View Projects
         </a>
-        <a href="/contact" className="bg-orange-500 hover:bg-blue-600 text-white py-2 px-6 rounded-lg">
+        <a href="/contact" className="bg-orange-500 hover:bg-blue-600 text-white py-2 px-4 md:py-2 md:px-6 rounded-lg">
           Contact Me
         </a>
       </div>
     </div>
   </div>
 );
+
 
 
 function App() {
