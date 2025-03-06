@@ -5,65 +5,64 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get("https://mern-backend-248k.onrender.com/api/projects")
-      .then(response => {
+    axios
+      .get("https://mern-backend-248k.onrender.com/api/projects")
+      .then((response) => {
         setProjects(response.data);
       })
-      .catch(error => {
+      .catch((error) => {
         console.error("Error fetching projects:", error);
       });
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white p-8">
-      <h2 className="text-3xl font-bold text-center mb-6">My Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {projects.length > 0 ? (
-          projects.map((project) => (
-            <div key={project._id} className="bg-gray-800 p-6 rounded-lg shadow-md">
-              {/* Image Section */}
-              {project.image && (
-               <img
-               src={project.image.startsWith("/") ? project.image : `${process.env.PUBLIC_URL}${project.image}`}
-               alt={project.title}
-               className="w-full h-40 object-cover rounded-md mb-4"
-             />
-             
+    <div className="min-h-screen bg-white text-black px-6 py-10">
+      <h2 className="text-5xl font-bold text-blue-600 text-center mb-8">My Projects</h2>
+
+      {projects.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {projects.map((project) => (
+            <div key={project._id} className="bg-gray-100 p-4 rounded-lg shadow-lg flex flex-col items-center">
               
+              {/* ✅ Larger Project Image */}
+              {project.image && (
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-80 object-cover rounded-lg mb-3"
+                />
               )}
-              <h3 className="text-xl font-semibold">{project.title}</h3>
-              <p className="mt-2 text-gray-400">{project.description}</p>
-              <p className="mt-2">
+
+              {/* ✅ Smaller Project Title */}
+              <h3 className="text-lg font-semibold text-center">{project.title}</h3>
+              
+              {/* ✅ Smaller Project Description */}
+              <p className="mt-1 text-sm text-gray-600 text-center">{project.description}</p>
+              
+              {/* ✅ Smaller Technologies Text */}
+              <p className="mt-1 text-xs text-gray-500">
                 <strong>Technologies:</strong> {project.technologies.join(", ")}
               </p>
-              <div className="mt-4">
+
+              {/* ✅ GitHub & Live Demo Links */}
+              <div className="mt-3 flex space-x-4">
                 {project.githubLink && (
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 hover:underline mr-4"
-                  >
+                  <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline text-sm">
                     GitHub
                   </a>
                 )}
                 {project.liveDemo && (
-                  <a
-                    href={project.liveDemo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-orange-400 hover:underline"
-                  >
+                  <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:underline text-sm">
                     Live Demo
                   </a>
                 )}
               </div>
             </div>
-          ))
-        ) : (
-          <p className="text-center text-gray-400">No projects available.</p>
-        )}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <p className="text-center text-gray-500">No projects available.</p>
+      )}
     </div>
   );
 };
