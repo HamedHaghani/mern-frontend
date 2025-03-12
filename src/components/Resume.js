@@ -11,14 +11,14 @@ const Resume = () => {
           <strong>Name:</strong> <span className="text-gray-900">Hamed Haghani</span>
         </p>
         <p className="text-lg text-gray-700 mb-3">
-          <strong>Email:</strong> <span className="text-gray-900">hamed@example.com</span>
+          <strong>Email:</strong> <span className="text-gray-900">HamedHaghani@Yahoo.com</span>
         </p>
         <p className="text-lg text-gray-700 mb-3">
           <strong>Location:</strong> <span className="text-gray-900">Toronto, Canada</span>
         </p>
         <p className="text-lg text-gray-700 mb-3">
           <strong>Skills:</strong> 
-          <span className="text-gray-900"> JavaScript, React, Node.js, MERN Stack, AI, Data Structures</span>
+          <span className="text-gray-900"> JavaScript,Python, Java, MERN Stack, AI, Data Structures</span>
         </p>
       </div>
 

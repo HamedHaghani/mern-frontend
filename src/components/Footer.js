@@ -9,10 +9,10 @@ const Footer = () => {
           <a href="https://github.com/HamedHaghani" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+          <a href="https://www.linkedin.com/in/hamed-haghani-aa9027227" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             LinkedIn
           </a>
-          <a href="mailto:your-email@example.com" className="hover:text-white">
+          <a href="mailto:HamedHaghani@yahoo.com" className="hover:text-white">
             Email Me
           </a>
         </div>
