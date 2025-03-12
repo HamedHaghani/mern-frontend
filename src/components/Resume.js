@@ -6,7 +6,7 @@ const Resume = () => {
       
       {/* ✅ Left Section - Personal Information */}
       <div className="md:w-1/3 text-center md:text-left md:pr-10">
-        <h2 className="text-5xl font-bold text-purple-600 mb-6">About Me</h2>
+        <h2 className="text-5xl font-bold text-purple-600 mb-6"> personal Information</h2>
         <p className="text-lg text-gray-700 mb-3">
           <strong>Name:</strong> <span className="text-gray-900">Hamed Haghani</span>
         </p>
@@ -17,8 +17,8 @@ const Resume = () => {
           <strong>Location:</strong> <span className="text-gray-900">Toronto, Canada</span>
         </p>
         <p className="text-lg text-gray-700 mb-3">
-          <strong>Skills:</strong> 
-          <span className="text-gray-900"> JavaScript,Python, Java, MERN Stack, AI, Data Structures</span>
+          <strong>Education: </strong> 
+          <span className="text-gray-900"> Advanced Diploma , George Brown College</span>
         </p>
       </div>
 
