@@ -7,6 +7,7 @@ import BIRDS from "vanta/dist/vanta.birds.min";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
+import { FaRobot } from "react-icons/fa";
 
 function Home() {
   const vantaRef = useRef(null);
@@ -46,7 +47,7 @@ function Home() {
   return (
     <div ref={vantaRef} className="relative min-h-screen flex flex-col justify-center items-center text-white px-6">
       <h1 className="text-[4rem] md:text-[6rem] font-extrabold tracking-wider uppercase text-gray-100">
-        I Build <span className="text-purple-500">Your Software</span>
+        Hi, I'm <span className="text-purple-500">Hamed !</span>
       </h1>
       {/* <p className="text-lg text-gray-300 max-w-xl mt-4">
         I'm a Full Stack Developer passionate about building scalable web applications.
@@ -55,8 +56,8 @@ function Home() {
         <Link to="projects" smooth={true} duration={500} className="cursor-pointer bg-gray-600 hover:bg-purple-600 text-white py-2 px-6 rounded-lg">
           View Projects
         </Link>
-        <Link to="about" smooth={true} duration={500} className="cursor-pointer bg-blue-500 hover:bg-purple-600 text-white py-2 px-6 rounded-lg">
-          About Me
+        <Link to="contact" smooth={true} duration={500} className="cursor-pointer bg-blue-500 hover:bg-purple-600 text-white py-2 px-6 rounded-lg">
+          Contact Me
         </Link>
       </div>
     </div>
@@ -73,7 +74,9 @@ function App() {
         {/* Navigation Bar */}
         <nav className="bg-gray-800 py-4 shadow-md fixed top-0 w-full z-50">
           <div className="max-w-5xl mx-auto px-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold text-white"> welcome </h1>
+          <h1 className="text-xl font-bold text-white flex items-center">
+          <FaRobot className="text-orange-300 text-2xl mr-2" /> My Portfolio
+        </h1>
 
             {/* Mobile Menu Button */}
             <button className="text-white md:hidden" onClick={() => setIsOpen(!isOpen)}>
