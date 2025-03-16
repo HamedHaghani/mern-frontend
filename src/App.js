@@ -118,9 +118,9 @@ function App() {
                 
                 <p className="text-lg text-gray-700 leading-relaxed border-l-4 border-purple-500 pl-4">
                 I have a strong passion for programming and problem-solving, with a solid understanding of data structures and algorithms.
-                 My background in engineering has helped me think logically and build efficient solutions.
-                  I also have strong communication skills, allowing me to work well with teams and explain technical concepts clearly.
-                   I'm always eager to learn new technologies and improve my skills to stay ahead in the ever-evolving world of software development
+                <p>My background in engineering has helped me think logically and build efficient solutions.</p>
+                I also have strong communication skills, allowing me to work well with teams and explain technical concepts clearly.
+                I'm always eager to learn new technologies and improve my skills to stay ahead in the ever-evolving world of software development.
                 </p>
 
                 {/* Key Skills Section */}
