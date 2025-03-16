@@ -18,7 +18,7 @@ const Resume = () => {
         </p>
         <p className="text-lg text-gray-700 mb-3">
           <strong>Education: </strong> 
-          <span className="text-gray-900"> Advanced Diploma , George Brown College</span>
+          <span className="text-gray-900"> Computer programming and Analysis, Advanced Diploma , George Brown College</span>
         </p>
       </div>
 
