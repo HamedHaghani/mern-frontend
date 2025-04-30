@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-gray-300 py-4 mt-8">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center px-4">
-        <p className="text-sm">© {new Date().getFullYear()} Hamed Haghani. All Rights Reserved.</p>
+        <p className="text-sm">© {new Date().getFullYear()} Hamed Haghani . All Rights Reserved.</p>
         <div className="flex space-x-4 mt-2 md:mt-0">
           <a href="https://github.com/HamedHaghani" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             GitHub
