@@ -98,7 +98,9 @@ function App() {
                 <img
                   src="/profile.jpg"
                   alt="Hamed Haghani"
-                  className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-purple-500 shadow-lg hover:shadow-2xl transition duration-300 transform hover:scale-105"
+                  className="w-40 md:w-52 h-56 md:h-72 object-cover rounded-[110px] border border-gray-300 shadow-sm hover:shadow-md transition duration-300 transform hover:scale-105"
+
+
                 />
               </div>
 
@@ -106,30 +108,32 @@ function App() {
                 <h2 className="text-5xl font-extrabold text-purple-700 mb-6">About Me</h2>
 
                 <p className="text-lg text-gray-700 leading-relaxed border-l-4 border-purple-500 pl-4">
-                  I have a strong passion for programming and problem-solving, with a solid understanding of data structures and algorithms.
-                  <p>My background in engineering has helped me think logically and build efficient solutions.</p>
-                  I also have strong communication skills, allowing me to work well with teams and explain technical concepts clearly.
-                  I'm always eager to learn new technologies and improve my skills to stay ahead in the ever-evolving world of software development.
-                </p>
+  I’m a software developer with a background in engineering and a strong focus on real-world problem solving.
+  My current skills span full-stack development, software design, and API integration.
+  I’m also experienced in <strong>data analytics</strong>, using tools like <strong>Python</strong>, <strong>Pandas</strong>, and <strong>SQL</strong> to clean, analyze, and visualize data for insights.
+  In addition, I work with <strong>machine learning frameworks</strong> such as scikit-learn and TensorFlow to build predictive models.
+  I’m a fast learner who enjoys building efficient systems and exploring the intersection of AI, analytics, and modern software development.
+</p>
 
                 <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3">
-                    <span className="text-purple-500 text-2xl">⚡</span>
-                    <p><strong>JavaScript & Java</strong> expert in debugging & performance optimization.</p>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="text-purple-500 text-2xl">🚀</span>
-                    <p><strong>Data Structures & Algorithms</strong> optimizing performance & scalability.</p>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="text-purple-500 text-2xl">🐳</span>
-                    <p><strong>Docker & CI/CD</strong> containerized deployments & automation.</p>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="text-purple-500 text-2xl">🛠️</span>
-                    <p><strong>Test-Driven Development</strong> writing robust & scalable applications.</p>
-                  </div>
-                </div>
+  <div className="flex items-center space-x-3">
+    <span className="text-purple-500 text-2xl">🧠</span>
+    <p><strong>AI & Machine Learning</strong> building predictive models using Python, scikit-learn, and TensorFlow.</p>
+  </div>
+  <div className="flex items-center space-x-3">
+    <span className="text-purple-500 text-2xl">📊</span>
+    <p><strong>Data Analytics</strong> analyzing and visualizing data with Pandas, SQL, and Python.</p>
+  </div>
+  <div className="flex items-center space-x-3">
+    <span className="text-purple-500 text-2xl">🧩</span>
+    <p><strong>Full-Stack Development</strong> building responsive apps with clean APIs and modern UI/UX.</p>
+  </div>
+  <div className="flex items-center space-x-3">
+    <span className="text-purple-500 text-2xl">🚀</span>
+    <p><strong>Data Structures & Algorithms</strong> designing efficient solutions with optimized performance.</p>
+  </div>
+</div>
+
 
                 {/* Taskforce Project Card */}
                 <div className="mt-10">
@@ -146,9 +150,6 @@ function App() {
                     >
                       View Live App →
                     </a>
-                    <p className="text-gray-500 text-sm italic mt-2">
-                      Note: Hosted on a free Render account, so backend/database may take up to 1 minute to spin up if inactive.
-                    </p>
                   </div>
                 </div>
               </div>
